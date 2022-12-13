@@ -160,24 +160,24 @@ const hour = date.getHours();
 const messages = ["Good morning", "Good Afternoon", "Good evening"];
 const messages_color = ["red", "green", "blue"];
  
-var shoosed_message_index = 0;
+var message_index = 0;
 switch (hour) {
     case (hour >= 0 && hour < 12):
-        shoosed_message_index = 0;
+       message_index = 0;
         break;
 
     case (hour >= 12 && hour < 18):
-        shoosed_message_index = 1;
+        message_index = 1;
         break; 
     default:
-        shoosed_message_index = 2;
+        message_index = 2;
         break;
 }
 
  
 ReactDOM.render(
   <div>
-    <h1 style={{color : messages_color[shoosed_message_index]}}>{messages[shoosed_message_index]}<br />  time is : {date.toTimeString()}</h1> 
+    <h1 style={{color : messages_color[message_index]}}>{messages[message_index]}<br />  time is : {date.toTimeString()}</h1> 
   </div>,
   document.getElementById("challenge")
 );
